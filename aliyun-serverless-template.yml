@@ -17,7 +17,7 @@ Resources:
         Timer:
           Type: Timer
           Properties:
-            CronExpression: '0 20 5 * * *'
+            CronExpression: '0 40 19 * * *'
             Enable: true
             
     SilverAward:
