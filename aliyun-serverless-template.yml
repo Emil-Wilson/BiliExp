@@ -12,48 +12,22 @@ Resources:
         Handler: BiliExp.main
         Runtime: python3
         CodeUri: './'
+        Description: 'B站自动领取经验'
         Timeout: 60
       Events:
         Timer:
           Type: Timer
           Properties:
-            CronExpression: '0 40 19 * * *'
+            CronExpression: '0 20 16 * * *'
             Enable: true
             
-    SilverAward:
-      Type: 'Aliyun::Serverless::Function'
-      Properties:
-        Handler: SilverAward.main
-        Runtime: python3
-        CodeUri: './'
-        Timeout: 60
-      Events:
-        Timer:
-          Type: Timer
-          Properties:
-              CronExpression: '0 */10 6,7 * * *'
-              Enable: true
-              
-    silver2coin:
-      Type: 'Aliyun::Serverless::Function'
-      Properties:
-        Handler: silver2coin.main
-        Runtime: python3
-        CodeUri: './'
-        Timeout: 60
-      Events:
-        Timer:
-          Type: Timer
-          Properties:
-              CronExpression: '0 0 4 * * *'
-              Enable: true
-              
     check:
       Type: 'Aliyun::Serverless::Function'
       Properties:
         Handler: check.main
         Runtime: python3
         CodeUri: './'
+        Description: '登录状态每日检查'
         Timeout: 60
       Events:
         Timer:
