@@ -17,65 +17,9 @@ Resources:
         Timer:
           Type: Timer
           Properties:
-            CronExpression: '0 20 16 * * *'
+            CronExpression: '0 20 5 * * *'
             Enable: true
             
-    BiliLottery:
-      Type: 'Aliyun::Serverless::Function'
-      Properties:
-        Handler: BiliLottery.main
-        Runtime: python3
-        CodeUri: './'
-        Timeout: 60
-      Events:
-        Timer:
-          Type: Timer
-          Properties:
-              CronExpression: '0 */10 * * * *'
-              Enable: true
-            
-    doActivity:
-      Type: 'Aliyun::Serverless::Function'
-      Properties:
-        Handler: doActivity.main
-        Runtime: python3
-        CodeUri: './'
-        Timeout: 60
-      Events:
-        Timer:
-          Type: Timer
-          Properties:
-              CronExpression: '0 30 16 * * *'
-              Enable: true
-
-    mangaClockIn:
-      Type: 'Aliyun::Serverless::Function'
-      Properties:
-        Handler: mangaClockIn.main
-        Runtime: python3
-        CodeUri: './'
-        Timeout: 60
-      Events:
-        Timer:
-          Type: Timer
-          Properties:
-              CronExpression: '0 40 16 * * *'
-              Enable: true
-              
-    mangaAutoBuy:
-      Type: 'Aliyun::Serverless::Function'
-      Properties:
-        Handler: mangaAutoBuy.main
-        Runtime: python3
-        CodeUri: './'
-        Timeout: 60
-      Events:
-        Timer:
-          Type: Timer
-          Properties:
-              CronExpression: '0 40 16 * * *'
-              Enable: true
-              
     SilverAward:
       Type: 'Aliyun::Serverless::Function'
       Properties:
@@ -87,7 +31,7 @@ Resources:
         Timer:
           Type: Timer
           Properties:
-              CronExpression: '0 */10 17,18 * * *'
+              CronExpression: '0 */10 6,7 * * *'
               Enable: true
               
     silver2coin:
@@ -101,21 +45,7 @@ Resources:
         Timer:
           Type: Timer
           Properties:
-              CronExpression: '0 0 19 * * *'
-              Enable: true
-              
-    cleanDynamic:
-      Type: 'Aliyun::Serverless::Function'
-      Properties:
-        Handler: cleanDynamic.main
-        Runtime: python3
-        CodeUri: './'
-        Timeout: 60
-      Events:
-        Timer:
-          Type: Timer
-          Properties:
-              CronExpression: '0 0 0 1,15 * *'
+              CronExpression: '0 0 4 * * *'
               Enable: true
               
     check:
