@@ -18,7 +18,7 @@ Resources:
         Timer:
           Type: Timer
           Properties:
-            CronExpression: '0 20 16 * * *'
+            CronExpression: '0 20 20 * * *'
             Enable: true
             
     check:
@@ -33,5 +33,5 @@ Resources:
         Timer:
           Type: Timer
           Properties:
-              CronExpression: '0 10 16 * * *'
+              CronExpression: '0 20 20 * * *'
               Enable: true
